@@ -4,48 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Document</title>
+  <title>Treasure Game</title>
 </head>
 <body>
-  <div class="container">
-    <div class="row width-100 py-2 bg-primary">
-      <p>TITlE</p>
+  <div class="container" style="min-width: 350px">
+    <div id="title-div" class="row py-4 mt-4">
+      <div class="col-md-2 col-sm-12"></div>
+      <div class="col-md-8 col-sm-12">
+        <img id="title-img" class="img-fluid d-block mx-auto" src="./assets/images/treasureGameLogo.png">
+      </div>
     </div>
-    <div class="row bg-secondary">
-      <p>instructions</p>
+    <div class="row p-4 instruction-box">
+      <div class="col-sm-12 col-md-8">
+        <p class="mx-auto text-justify px-3 instructions">Each crystal is worth a secret value. Select the crystals to increase your total amount. If you are able to make your total equal the <b>GOAL</b> value exactly --- you win!
+        But if your total goes above the <b>GOAL</b> value --- you lose.</p>
+        <p class="mx-auto text-justify px-3 instructions">After each round is completed, a new goal number is set and new values are assigned to each jewel.</p>
+        <p class="mx-auto text-justify px-3 instructions">You may adjust the difficulty by changing the number of jewels that are available.</p>
+        </div>
+      <div class="col-sm-12 col-md-4 pt-4">
+        <div id="select-num-jewels" class="text-center">
+          <h3 class="pt-5">Select the number of jewels</h3>
+          <div class="form-group pt-2">
+              <select class="form-control w-25 mx-auto" id="num-jewels">
+                <option>2</option>
+                <option selected>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+              </select>
+            </div>
+        </div>
+      </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12 col-md-3 bg-warning">
-        <h2 class="text-center">GOAL</h2>
+    <div class="row game-display">
+      <div class="col-sm-12 col-md-3 game-data">
+        <h2 class="text-center pt-2">GOAL</h2>
         <h1 id="goal-value" class="text-center pb-4"></h1>
-        <!-- <hr style="border-bottom: black solid 2px"/> -->
         <h2 class="text-center">TOTAL</h2>
         <h1 id="total-value" class="text-center pb-4">0</h1>
       </div>
-      <div id="jewel-box" class="col-sm-12 col-md-6 bg-danger">
-    </div>
-      <div class="col-sm-12 col-md-3 bg-success">
-        <p>wins and losses</p>
+      <div id="jewel-box" class="col-sm-12 col-md-6 pt-2"></div>
+      <div class="col-sm-12 col-md-3 game-data">
+        <h2 class="text-center pt-2">WINS</h2>
+        <h1 id="wins-value" class="text-center pb-4">0</h1>
+        <h2 class="text-center">LOSSES</h2>
+        <h1 id="losses-value" class="text-center pb-4">0</h1>
       </div>
     </div>
-
-
-
-
-
-
-
+  </div>
 
   </div>
 
-
-  <!-- SCRIPTS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- SCRIPTS --> 
   <script type="text/javascript" src="./assets/javascript/game.js"></script>
 </body>
 </html>

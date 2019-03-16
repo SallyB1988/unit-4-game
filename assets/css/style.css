@@ -1,7 +1,50 @@
-.jewel-img {
-  width: 75px;
+body {
+  background-image: url("../images/purple-bkg.jpg");
+  background-size: cover;
+  min-width: 350px;
+  color: black;
 }
+
 
 .score-display {
   height: 70px;
+}
+
+.instructions {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.instruction-box {
+  background-color: rgba(167, 36, 255, 0.87);
+}
+
+.game-display {
+  background-color: rgba(128, 18, 201, 0.808);
+}
+
+.game-data {
+  background-color: rgba(78, 194, 55, 0.664);
+  
+}
+
+#num-jewels {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#title-img {
+  width: 100%;
+}
+
+#jewel-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+  
+.gem-img {
+  width:  150px;
+  height: 150px;
+  margin: auto;
 }
