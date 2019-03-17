@@ -6,7 +6,6 @@ body {
   margin-bottom: 20px;
 }
 
-
 .score-display {
   height: 70px;
 }
@@ -27,17 +26,19 @@ body {
 
 .game-data {
   background-color: rgba(78, 194, 55, 0.664);
-  
 }
 
+
 #num-jewels {
-  font-size: 20px;
+  /* width: 70px; */
+  font-size: 24px;
   font-weight: bold;
 }
 
 #title-img {
   width: 100%;
 }
+
 
 #jewel-box {
   display: flex;
@@ -49,3 +50,45 @@ body {
   height: 150px;
   margin: auto;
 }
+
+
+/*
+  These rules take effect on phones (xs screens)
+*/
+
+@media screen and (max-width: 768px) {
+
+  .instructions {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  .instruction-box {
+    padding: 8px !important;
+  }
+
+  .jewel-select {
+    padding-top: 0px !important;
+  }
+
+  #num-jewels {
+    width: 25% !important;
+  }
+
+  .game-data-text {
+    font-size: 1.5em !important;
+    padding-bottom: 5px !important;
+  }
+
+  .gem-img {
+    width:  75px;
+    height: 75px;
+    margin: auto;
+  }
+
+  .image-container{
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+}
+
